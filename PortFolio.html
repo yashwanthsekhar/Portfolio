@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashwanth Sekhar | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav id="navbar" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 10; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); padding: 1.5rem 2rem; transition: all 0.3s ease;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+        <!-- Logo Section -->
+        <a href="#" class="logo" style="font-size: 1.8rem; font-weight: bold; color: #fff; text-decoration: none; background: linear-gradient(135deg, #00c6ff, #0072ff); -webkit-background-clip: text; color: transparent;">
+            Portfolio
+        </a>
+        
+        <!-- Nav Links -->
+        <div class="nav-links" style="display: flex; gap: 2rem; font-size: 1.1rem; align-items: center;">
+            <a href="#about" style="color: #0b0101; text-decoration: none; transition: color 0.3s ease; padding: 0.5rem 0;">About</a>
+            <a href="#skills" style="color: #0e0101; text-decoration: none; transition: color 0.3s ease; padding: 0.5rem 0;">Skills</a>
+            <a href="#projects" style="color: #0e0c0c; text-decoration: none; transition: color 0.3s ease; padding: 0.5rem 0;">Projects</a>
+            <a href="#education" style="color: #0d0b0b; text-decoration: none; transition: color 0.3s ease; padding: 0.5rem 0;">Education</a>
+            <a href="#contact" style="color: #0a0606; text-decoration: none; transition: color 0.3s ease; padding: 0.5rem 0;">Contact</a>
+            <a href="yaswanth.pdf" class="resume-btn" target="_blank" style="color: #0f0e0e; text-decoration: none; background: linear-gradient(135deg, #00c6ff, #0072ff); padding: 0.8rem 1.6rem; border-radius: 50px; font-weight: bold; transition: background 0.3s ease;">Resume</a>
+        </div>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger" style="background: transparent; border: none; display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 20;">
+            <span style="width: 30px; height: 4px; background-color: #fff;"></span>
+            <span style="width: 30px; height: 4px; background-color: #fff;"></span>
+            <span style="width: 30px; height: 4px; background-color: #fff;"></span>
+        </button>
+    </div>
+</nav>
+
+<!-- CSS for Hover Effects -->
+<style>
+    /* Hover effects for links */
+    .nav-links a:hover {
+        color: #00c6ff;
+        transition: color 0.3s ease;
+    }
+
+    /* Hover effects for Resume button */
+    .resume-btn:hover {
+        background: linear-gradient(135deg, #0072ff, #00c6ff);
+    }
+
+    /* Responsive Navbar (Mobile View) */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
+</style>
+
+<!-- JavaScript to Handle Hamburger Menu -->
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+
+<!-- Hero Section -->
+<header id="hero" style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); overflow: hidden; padding-top: 90px;">
+    <!-- Left Content (Text) -->
+    <div style="max-width: 50%; z-index: 2;">
+      <h1 style="font-size: 3.2rem; font-weight: bold; color: #fff; margin-bottom: 1rem;">Hi, I'm <span style="background: linear-gradient(135deg, #00c6ff, #0072ff); -webkit-background-clip: text; color: transparent;">Yashwanth Sekhar</span></h1>
+      <h2 id="typing-text" style="font-size: 1.7rem; font-weight: 500; color: #dcdcdc; margin-bottom: 1.5rem;">Computer Science Student</h2>
+      <p style="font-size: 1.1rem; color: #c7c7c7; margin-bottom: 2.5rem; max-width: 600px;">Passionate about coding, building innovative solutions, and creating the future of technology 🚀.</p>
+  
+      <!-- Social Links -->
+      <div class="social-links" style="display: flex; gap: 1.5rem; margin-bottom: 2rem;">
+        <a href="http://linkedin.com/in/yashwanth-sekhar" class="social-icon" style="font-size: 1.5rem; color: #fff;"><i class="fab fa-linkedin-in"></i></a>
+        <a href="http://github.com/yashwanthsekhar" class="social-icon" style="font-size: 1.5rem; color: #fff;"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/ys_killer009?igsh=NDJpc2lvZmNkcndp" class="social-icon" style="font-size: 1.5rem; color: #fff;"><i class="fab fa-instagram"></i></a>
+      </div>
+  
+      <!-- Contact Button -->
+      <a href="#contact" class="btn" style="font-size: 1.1rem; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00c6ff, #0072ff); color: #fff; border-radius: 50px; text-decoration: none;">Contact Me</a>
+    </div>
+  
+    <!-- Right Content (Image) -->
+    <div style="max-width: 45%; z-index: 2; display: flex; justify-content: flex-start; position: relative; left: -20%;">
+      <img src="profile.jpg" alt="Yashwanth Sekhar" class="profile-pic" style="width: 350px; height: 350px; object-fit: cover; border-radius: 50%; border: 4px solid transparent; background: linear-gradient(#fff, #fff) padding-box, linear-gradient(135deg, #00c6ff, #0072ff) border-box; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
+    </div>
+  </header>
+  
+  
+  
+  <!-- Additional CSS Styles -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  
+    .social-icon {
+      font-size: 1.8rem;
+      color: #fff;
+      padding: 0.6rem;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+  
+    .social-icon:hover {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: #fff;
+      transform: scale(1.2);
+      border-color: transparent;
+    }
+  
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00c6ff, 0 0 20px #0072ff;
+      transition: all 0.3s ease;
+    }
+  
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00c6ff, 0 0 40px #0072ff;
+    }
+  </style>
+  
+  <!-- Typing Animation Script -->
+  <script>
+    const texts = ["Computer Science Student", "Passionate Developer", "Future Software Engineer"];
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+  
+    (function type(){
+      if (count === texts.length) {
+        count = 0;
+      }
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+  
+      document.getElementById('typing-text').textContent = letter;
+      if(letter.length === currentText.length){
+        count++;
+        index = 0;
+        setTimeout(type, 1500);
+      } else {
+        setTimeout(type, 100);
+      }
+    }());
+  </script>
+  
+  
+
+   <!-- About Section -->
+<section id="about" class="section" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); padding: 4rem 2rem;">
+    <div class="container">
+        <h2 class="section-title" style="font-size: 2.5rem; color: #333; text-align: center; margin-bottom: 2rem;">About Me</h2>
+        <div class="about-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 3rem;">
+            <!-- Left Column (Text) -->
+            <div class="about-text" style="flex: 1 1 45%; color: #030303;">
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #030303;">I'm Yashwanth Sekhar, a passionate Computer Science and Engineering student at Lovely Professional University (LPU). With a keen interest in software development, Data Visualization , and data science. I continuously strive to enhance my skills through practical experiences, online courses, and real-world projects.</p>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #030303;">I am deeply committed to problem-solving and enjoy the challenges of building innovative solutions. My academic focus lies in programming, data structures, algorithms, and web development, and I am actively seeking internship opportunities to apply my skills in real-world scenarios.</p>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #030303;">In my free time, I love exploring new technologies, contributing to open-source projects, and enhancing my communication skills. I am also an avid learner who believes in constant self-improvement and pushing the boundaries of my knowledge.</p>
+
+                <div class="about-details" style="margin-top: 2rem;">
+                    <div style="margin-bottom: 1rem;">
+                        <span style="font-weight: bold;">Name:</span>
+                        <p style="display: inline-block; margin-left: 10px; color: #030303;">Yashwanth Sekhar.D</p>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="font-weight: bold;">Email:</span>
+                        <p style="display: inline-block; margin-left: 10px; color: #030303;">yashwanth09042004@gmail.com</p>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <span style="font-weight: bold;">From:</span>
+                        <p style="display: inline-block; margin-left: 10px; color: #030303;">Gorantla : Ananthapur dist, Andhra Pradesh</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Achievements Column -->
+<div class="achievements-section" style="flex: 1 1 45%; display: flex; flex-direction: column; gap: 1.2rem; padding: 1rem;">
+  <h2 style="text-align: center; font-size: 1.6rem; font-weight: 700; color: #1f3a63; margin-bottom: 1rem;">Key Achievements</h2>
+  
+  <!-- Project Completed -->
+  <div class="stat-item" style="background: linear-gradient(135deg, #653f94 0%, #52b6bf 100%); padding: 1.2rem; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+    <h3 style="font-size: 1.3rem; font-weight: bold; color: #fff; margin: 0;">2+</h3>
+    <p style="font-size: 0.95rem; color: #fff; margin: 0; opacity: 0.8;">Projects Completed : From my past learnings</p>
+  </div>
+
+  <!-- Certifications -->
+  <div class="stat-item" style="background: linear-gradient(135deg, #5845ac 0%, #53e1e4 100%); padding: 1.2rem; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+    <h3 style="font-size: 1.3rem; font-weight: bold; color: #fff; margin: 0;">8</h3>
+    <p style="font-size: 0.95rem; color: #fff; margin: 0; opacity: 0.8;">Certifications : Including Coursera,Udemy,Summer-internship etc...</p>
+  </div>
+
+  <!-- Hours Coding -->
+  <div class="stat-item" style="background: linear-gradient(135deg, #2e45a1 0%, #6dc1cf 100%); padding: 1.2rem; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+    <h3 style="font-size: 1.3rem; font-weight: bold; color: #fff; margin: 0;">250+</h3>
+    <p style="font-size: 0.95rem; color: #fff; margin: 0; opacity: 0.8;">Hours Coding : In Leetcode,GeeksforGeeks </p>
+  </div>
+</div>
+
+           
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Skills Section -->     
+<section id="skills" class="section">         
+    <div class="container">             
+      <h2 class="section-title">My Skills</h2>             
+      <div class="skills-container">                 
+        
+        <div class="skill-category">                     
+          <h3>Programming Languages</h3>                     
+          <div class="skills-list">                         
+            <div class="skill-item">                             
+              <div class="skill-info">                                 
+                <span>
+                  <img src="https://img.icons8.com/color/24/000000/java-coffee-cup-logo.png" alt="Java Logo" style="height: 20px; vertical-align: middle;"> Java
+                </span>                                 
+                <span>80%</span>                             
+              </div>                             
+              <div class="progress-bar">                                 
+                <div class="progress" style="width: 80%"></div>                             
+              </div>                         
+            </div>
+  
+            <div class="skill-item">                             
+              <div class="skill-info">                                 
+                <span>
+                  <img src="https://img.icons8.com/color/24/000000/c-plus-plus-logo.png" alt="C++ Logo" style="height: 20px; vertical-align: middle;"> C++
+                </span>                                 
+                <span>78%</span>                             
+              </div>                             
+              <div class="progress-bar">                                 
+                <div class="progress" style="width: 78%"></div>                             
+              </div>                         
+            </div>
+  
+            <div class="skill-item">                             
+              <div class="skill-info">                                 
+                <span>DSA</span>                                 
+                <span>85%</span>                             
+              </div>                             
+              <div class="progress-bar">                                 
+                <div class="progress" style="width: 85%"></div>                             
+              </div>                         
+            </div>                      
+          </div>                 
+        </div>
+  
+        <div class="skill-category">                     
+          <h3>Web Development</h3>                     
+          <div class="skills-list">                         
+            <div class="skill-item">                             
+              <div class="skill-info">                                 
+                <span>
+                  <img src="https://img.icons8.com/color/24/000000/html-5--v1.png" alt="HTML CSS Logo" style="height: 20px; vertical-align: middle;"> HTML/CSS
+                </span>                                 
+                <span>90%</span>                             
+              </div>                             
+              <div class="progress-bar">                                 
+                <div class="progress" style="width: 90%"></div>                             
+              </div>                         
+            </div>                         
+            <div class="skill-item">                             
+              <div class="skill-info">                                 
+                <span>
+                  <img src="https://img.icons8.com/color/24/000000/react-native.png" alt="React Logo" style="height: 20px; vertical-align: middle;"> React
+                </span>                                 
+                <span>65%</span>                             
+              </div>                             
+              <div class="progress-bar">                                 
+                <div class="progress" style="width: 65%"></div>                             
+              </div>                         
+            </div>                         
+            <div class="skill-item">                             
+              <div class="skill-info">                                 
+                <span>
+                  <img src="https://img.icons8.com/ios-filled/24/000000/sql.png" alt="SQL Logo" style="height: 20px; vertical-align: middle;"> SQL
+                </span>                                 
+                <span>80%</span>                             
+              </div>                             
+              <div class="progress-bar">                                 
+                <div class="progress" style="width: 80%"></div>                             
+              </div>                         
+            </div>                      
+          </div>                 
+        </div>
+  
+        <div class="skill-category">                     
+          <h3>Tools</h3>                     
+          <div class="skills-list">                         
+            <div class="skill-item">                             
+              <div class="skill-info">                                 
+                <span>
+                  <img src="https://img.icons8.com/color/24/000000/power-bi.png" alt="PowerBI Logo" style="height: 20px; vertical-align: middle;"> Agile Development
+                </span>                                 
+                <span>90%</span>                             
+              </div>                             
+              <div class="progress-bar">                                 
+                <div class="progress" style="width: 90%"></div>                             
+              </div>                         
+            </div>                         
+            <div class="skill-item">                             
+              <div class="skill-info">                                 
+                <span>
+                  <img src="https://img.icons8.com/color/24/000000/tableau-software.png" alt="Tableau Logo" style="height: 20px; vertical-align: middle;"> Tableau
+                </span>                                 
+                <span>85%</span>                             
+              </div>                             
+              <div class="progress-bar">                                 
+                <div class="progress" style="width: 85%"></div>                             
+              </div>                         
+            </div>                         
+            <div class="skill-item">                             
+              <div class="skill-info">                                 
+                <span>
+                  <img src="https://img.icons8.com/color/24/000000/microsoft-excel-2019--v1.png" alt="Excel Logo" style="height: 20px; vertical-align: middle;"> Ms-Excel
+                </span>                                 
+                <span>80%</span>                             
+              </div>                             
+              <div class="progress-bar">                                 
+                <div class="progress" style="width: 80%"></div>                             
+              </div>                         
+            </div>                      
+          </div>                 
+        </div>
+  
+        <!-- Soft Skills Section -->
+        <div class="skill-category">
+          <h3>Soft Skills</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>
+                  <img src="https://img.icons8.com/fluency/24/communication.png" alt="Communication Logo" style="height: 20px; vertical-align: middle;"> Communication
+                </span>
+                <span>85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Problem-Solving</span>
+                <span>90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>
+                  <img src="https://img.icons8.com/fluency/24/teamwork.png" alt="Teamwork Logo" style="height: 20px; vertical-align: middle;"> Teamwork
+                </span>
+                <span>80%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Adaptability</span>
+                <span>85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>         
+    </div>     
+  </section>
+<!-- Projects Section -->
+<section id="projects" class="section" style="background: #ffffff; color: #0a192f; padding: 4rem 0;">
+  <div class="container">
+    <h2 class="section-title" style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">My Projects</h2>
+    
+    <div class="project-card" style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; overflow: hidden; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+      <img src="res.jpg" alt="Restaurent Website" style="width: 100%; height: auto;">
+      <div style="padding: 1.5rem;">
+        <h3 style="font-size: 1.8rem;">Restaurant Website</h3>
+        <p style="margin: 0.8rem 0;">A responsive and elegant website for a restaurant business built using HTML, CSS, and JavaScript. It includes a clean layout, menus, contact forms, and smooth animations.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+        <a href="#" class="btn" style="background: #00c6ff; padding: 0.6rem 1.2rem; color: #fff; text-decoration: none; border-radius: 8px;">Live Demo</a>
+        <a href="#" class="btn" style="background: #644cdb; padding: 0.6rem 1.2rem; color: #fff; text-decoration: none; border-radius: 8px;">Code</a>
+      </div>
+    </div>
+
+    <div class="project-card" style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; overflow: hidden; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+      <img src="download.jpg" alt="Tic Tac Toe" style="width: 100%; height: auto;">
+      <div style="padding: 1.5rem;">
+        <h3 style="font-size: 1.8rem;">Tic Tac Toe Game</h3>
+        <p style="margin: 0.8rem 0;">A fun desktop-based Tic Tac Toe game developed in C++ with logic implementation for win conditions and draw detection.</p>
+        <p><strong>Technologies:</strong> C++</p>
+        <a href="#" class="btn" style="background: #00c6ff; padding: 0.6rem 1.2rem; color: #fff; text-decoration: none; border-radius: 8px;">Live Demo</a>
+        <a href="#" class="btn" style="background: #5f2bd7; padding: 0.6rem 1.2rem; color: #fff; text-decoration: none; border-radius: 8px;">Code</a>
+      </div>
+    </div>
+
+    <div class="project-card" style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; overflow: hidden; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+      <img  src="cal.jpg" alt="Java Calculator" style="width: 100%; height: auto;">
+      <div style="padding: 1.5rem;">
+        <h3 style="font-size: 1.8rem;">Java Calculator</h3>
+        <p style="margin: 0.8rem 0;">A GUI-based calculator developed in Java that supports basic arithmetic operations with a user-friendly layout and responsive behavior.</p>
+        <p><strong>Technologies:</strong> Java (Swing)</p>
+        <a href="#" class="btn" style="background: #00c6ff; padding: 0.6rem 1.2rem; color: #fff; text-decoration: none; border-radius: 8px;">Live Demo</a>
+        <a href="#" class="btn" style="background: #562cca; padding: 0.6rem 1.2rem; color: #fff; text-decoration: none; border-radius: 8px;">Code</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Include in your CSS -->
+<style>
+  .projects-section {
+    background-color: #3f68ae;
+    color: #fff;
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #2e1f12; /* a brownish-black shade */
+  }
+  
+  
+  .container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background: #112240;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-info {
+    padding: 20px;
+  }
+  
+  .project-info h3 {
+    color: #64ffda;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-info p {
+    color: #ccd6f6;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .tech-tags span {
+    background: #233554;
+    color: #64ffda;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .btn, .btn-outline {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  
+  .btn {
+    background: #64ffda;
+    color: #0a192f;
+  }
+  
+  .btn:hover {
+    background: #52e0c4;
+  }
+  
+  .btn-outline {
+    background: transparent;
+    border: 2px solid #64ffda;
+    color: #64ffda;
+  }
+  
+  .btn-outline:hover {
+    background: #64ffda;
+    color: #0a192f;
+  }
+  </style>
+
+
+   <!-- Education Section -->
+<section id="education" class="section" style="background: linear-gradient(135deg, #fdfcfb 0%, #fbfbfb 100%); padding: 60px 0;">
+    <div class="container">
+      <h2 class="section-title" style="text-align: center; font-size: 2.8rem; margin-bottom: 3rem; color: #333;">Education</h2>
+      <div class="education-grid">
+  
+        <div class="education-card">
+          <div class="education-icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/graduation-cap.png" alt="Graduation Icon">
+          </div>
+          <div class="education-info">
+            <h3>B.Tech in Computer Science</h3>
+            <h4>Lovely Professional University</h4>
+            <p class="education-date">Since 2025</p>
+            <p>CGPA: 6.5/10 (Expected)</p>
+          </div>
+        </div>
+  
+        <div class="education-card">
+            <div class="education-icon">
+              <img src="https://img.icons8.com/ios-filled/50/ffffff/diploma.png" alt="Intermediate Icon">
+            </div>
+            <div class="education-info">
+              <h3>Intermediate</h3>
+              <h4>Narayana Junior College</h4>
+              <p class="education-date">2020 - 2022</p>
+              <p>Percentage: 82.3%</p>
+            </div>
+          </div>
+  
+        <div class="education-card">
+          <div class="education-icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/school.png" alt="High School Icon">
+          </div>
+          <div class="education-info">
+            <h3>High School</h3>
+            <h4>Wisewoods International School</h4>
+            <p class="education-date">2019 - 2020</p>
+            <p>CGPA: 10.0</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  <!-- Add this CSS -->
+  <style>
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+  
+    .education-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .education-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    }
+  
+    .education-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+  
+    .education-icon img {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .education-info h3 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+  
+    .education-info h4 {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+  
+    .education-info p {
+      font-size: 1rem;
+      color: #555;
+      margin: 0.3rem 0;
+    }
+  
+    .education-date {
+      font-weight: bold;
+      color: #222;
+    }
+  </style>
+  
+  
+
+ <!-- Training Section -->
+<section id="training" class="section" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); padding: 4rem 2rem;">
+    <div class="container">
+        <h2 class="section-title" style="font-size: 2.5rem; color: #333; text-align: center; margin-bottom: 2rem;">Training & Certifications</h2>
+        <div class="certificates" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; justify-items: center;">
+
+           <!-- Certificate Card 1 - C++ Programming -->
+           <div class="certificate-card" style="background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); width: 100%; text-align: center; transition: all 0.3s ease; overflow: hidden; position: relative;">
+            <div class="certificate-icon" style="font-size: 3rem; color: #00c6ff; margin-bottom: 1.5rem; transition: transform 0.3s;">
+                <i class="fas fa-cogs"></i> <!-- C++ Icon -->
+            </div>
+            <div class="certificate-info">
+                <h3 style="font-size: 1.6rem; color: #333; font-weight: bold; margin-bottom: 0.5rem;">Programming in C++: A Hands-on Introduction Specialization</h3>
+                <p style="font-size: 1.1rem; color: #555;">Coursera | Aug 2023 - Dec 2023</p>
+                <a href="c++.pdf" class="view-cert" style="display: inline-block; margin-top: 1rem; font-size: 1.1rem; color: #00c6ff; text-decoration: none; border-bottom: 2px solid #00c6ff; transition: color 0.3s ease;">View Certificate</a>
+            </div>
+        </div>
+            
+
+            <!-- Certificate Card 2 - R Programming -->
+            <div class="certificate-card" style="background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); width: 100%; text-align: center; transition: all 0.3s ease; overflow: hidden; position: relative;">
+                <div class="certificate-icon" style="font-size: 3rem; color: #00c6ff; margin-bottom: 1.5rem; transition: transform 0.3s;">
+                    <i class="fab fa-r-project"></i> <!-- R Programming Icon -->
+                </div>
+                <div class="certificate-info">
+                    <h3 style="font-size: 1.6rem; color: #333; font-weight: bold; margin-bottom: 0.5rem;">Coursera-R Programming</h3>
+                    <p style="font-size: 1.1rem; color: #555;">Coursera | Jan 2023 - Apr 2023</p>
+                    <a href="R.pdf" class="view-cert" style="display: inline-block; margin-top: 1rem; font-size: 1.1rem; color: #00c6ff; text-decoration: none; border-bottom: 2px solid #00c6ff; transition: color 0.3s ease;">View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Certificate Card 3 - Microsoft Excel -->
+            <div class="certificate-card" style="background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); width: 100%; text-align: center; transition: all 0.3s ease; overflow: hidden; position: relative;">
+                <div class="certificate-icon" style="font-size: 3rem; color: #00c6ff; margin-bottom: 1.5rem; transition: transform 0.3s;">
+                    <i class="fas fa-file-excel"></i> <!-- Excel Icon -->
+                </div>
+                <div class="certificate-info">
+                    <h3 style="font-size: 1.6rem; color: #333; font-weight: bold; margin-bottom: 0.5rem;">Microsoft Excel</h3>
+                    <p style="font-size: 1.1rem; color: #555;">Coursera | Jan 2023 - Apr 2023</p>
+                    <a href="Excel.pdf" class="view-cert" style="display: inline-block; margin-top: 1rem; font-size: 1.1rem; color: #00c6ff; text-decoration: none; border-bottom: 2px solid #00c6ff; transition: color 0.3s ease;">View Certificate</a>
+                </div>
+            </div>
+
+           <!-- Certificate Card 4 - Tableau -->
+           <div class="certificate-card" style="background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); width: 100%; text-align: center; transition: all 0.3s ease; overflow: hidden; position: relative;">
+            <div class="certificate-icon" style="font-size: 3rem; color: #00c6ff; margin-bottom: 1.5rem; transition: transform 0.3s;">
+                <i class="fab fa-tableau"></i> <!-- Tableau Icon -->
+            </div>
+            <div class="certificate-info">
+                <h3 style="font-size: 1.6rem; color: #333; font-weight: bold; margin-bottom: 0.5rem;">Tableau</h3>
+                <p style="font-size: 1.1rem; color: #555;">Coursera | May 2024 - July 2024</p>
+                <a href="tableau.pdf" class="view-cert" style="display: inline-block; margin-top: 1rem; font-size: 1.1rem; color: #00c6ff; text-decoration: none; border-bottom: 2px solid #00c6ff; transition: color 0.3s ease;">View Certificate</a>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .certificate-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .certificate-card:hover .certificate-icon {
+        color: #0072ff; /* Change icon color on hover */
+    }
+
+    .view-cert:hover {
+        color: #0072ff; /* Change link color */
+        border-bottom: 2px solid #0072ff; /* Adding underline effect on hover */
+    }
+</style>
+
+   <!-- Contact Section -->
+<section id="contact" class="section" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); padding: 4rem 2rem;">
+    <div class="container">
+        <h2 class="section-title" style="font-size: 2.5rem; color: #333; text-align: center; margin-bottom: 3rem;">Get In Touch</h2>
+        <div class="contact-container" style="display: flex; justify-content: space-between; gap: 2rem;">
+            <!-- Contact Info -->
+            <div class="contact-info" style="flex: 1; background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
+                <div class="contact-item" style="display: flex; align-items: center; margin-bottom: 2rem;">
+                    <i class="fas fa-envelope" style="font-size: 2rem; color: #00c6ff; margin-right: 1rem;"></i>
+                    <div>
+                        <h3 style="font-size: 1.5rem; color: #333; font-weight: bold;">Email</h3>
+                        <p style="font-size: 1.1rem; color: #555;">yashwanth09042004@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item" style="display: flex; align-items: center; margin-bottom: 2rem;">
+                    <i class="fas fa-phone" style="font-size: 2rem; color: #00c6ff; margin-right: 1rem;"></i>
+                    <div>
+                        <h3 style="font-size: 1.5rem; color: #333; font-weight: bold;">Phone</h3>
+                        <p style="font-size: 1.1rem; color: #555;">+91 9177650763</p>
+                    </div>
+                </div>
+                <div class="contact-item" style="display: flex; align-items: center;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: #00c6ff; margin-right: 1rem;"></i>
+                    <div>
+                        <h3 style="font-size: 1.5rem; color: #333; font-weight: bold;">Location</h3>
+                        <p style="font-size: 1.1rem; color: #555;">Ananthapur, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" style="flex: 1; background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <input type="text" placeholder="Your Name" required style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;">
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <input type="email" placeholder="Your Email" required style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;">
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <input type="tel" placeholder="Your Phone" style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;">
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <textarea placeholder="Your Message" rows="5" required style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;"></textarea>
+                </div>
+                <button type="submit" class="btn" style="background: linear-gradient(135deg, #00c6ff, #0072ff); padding: 1rem 2rem; color: #fff; font-size: 1.2rem; border-radius: 50px; cursor: pointer; transition: background 0.3s ease;">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- CSS for Hover and Focus Effects -->
+<style>
+    /* Input and textarea focus effect */
+    input:focus, textarea:focus {
+        border-color: #00c6ff;
+        outline: none;
+    }
+
+    /* Hover effect for the button */
+    .btn:hover {
+        background: linear-gradient(135deg, #0072ff, #00c6ff);
+    }
+</style>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Yashwanth Sekhar</h3>
+                    <p>Computer Science student passionate about building innovative solutions and constantly learning new technologies.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Me</h3>
+                    <div class="social-icons">
+                        <a href="http://linkedin.com/in/yashwanth-sekhar"><i class="fab fa-linkedin"></i></a>
+                        <a href="http://GitHub.com/yashwanthsekhar"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/jashwanth_61494"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/ys_killer009?igsh=NDJpc2lvZmNkcndp"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Yashwanth Sekhar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
