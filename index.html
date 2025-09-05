@@ -936,14 +936,21 @@
         </div>
     </footer>
 
-   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+
         <script>
           (function(){
-            emailjs.init("mXEWoCZtElpZ9A9Mh");  
+            // ✅ New initialization method
+            emailjs.init({
+              publicKey: "mXEWoCZtElpZ9A9Mh"
+            });
           })();
         
           document.getElementById("contact-form").addEventListener("submit", function(event) {
             event.preventDefault();
+        
             emailjs.sendForm("service_cmr2rys", "template_b3oyfsa", this)
               .then(() => {
                 alert("✅ Message sent successfully!");
@@ -953,5 +960,6 @@
               });
           });
         </script>
+
     </body>
 </html>
