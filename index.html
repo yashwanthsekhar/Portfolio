@@ -939,22 +939,19 @@
    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
         <script>
           (function(){
-            
-            emailjs.init("mXEWoCZtElpZ9A9Mh"); 
+            emailjs.init("mXEWoCZtElpZ9A9Mh");  
           })();
         
-          document.getElementById('contact-form').addEventListener('submit', function(event) {
+          document.getElementById("contact-form").addEventListener("submit", function(event) {
             event.preventDefault();
-        
-            
-            emailjs.sendForm("service_cmr2rys" , "template_b3oyfsa", this)
+            emailjs.sendForm("service_cmr2rys", "template_b3oyfsa", this)
               .then(() => {
-                alert("Message sent successfully! 🎉");
+                alert("✅ Message sent successfully!");
                 this.reset();
               }, (error) => {
-                alert("Failed to send message. ❌ " + JSON.stringify(error));
+                alert("❌ Failed to send message: " + JSON.stringify(error));
               });
           });
         </script>
-</body>
+    </body>
 </html>
