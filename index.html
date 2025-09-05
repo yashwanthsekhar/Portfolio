@@ -940,14 +940,14 @@
         <script>
           (function(){
             // Replace with your real Public Key from EmailJS
-            emailjs.init(yashwanth09042004@gmail.com); 
+            emailjs.init("yashwanth09042004@gmail.com"); 
           })();
         
           document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
         
             // Replace with your real Service ID and Template ID from EmailJS
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            emailjs.sendForm("service_cmr2rys" , "template_b3oyfsa", this)
               .then(() => {
                 alert("Message sent successfully! 🎉");
                 this.reset();
