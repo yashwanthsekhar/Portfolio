@@ -857,22 +857,33 @@
             </div>
 
             <!-- Contact Form -->
-            <form class="contact-form" style="flex: 1; background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
-                <div class="form-group" style="margin-bottom: 1.5rem;">
-                    <input type="text" placeholder="Your Name" required style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;">
-                </div>
-                <div class="form-group" style="margin-bottom: 1.5rem;">
-                    <input type="email" placeholder="Your Email" required style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;">
-                </div>
-                <div class="form-group" style="margin-bottom: 1.5rem;">
-                    <input type="tel" placeholder="Your Phone" style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;">
-                </div>
-                <div class="form-group" style="margin-bottom: 1.5rem;">
-                    <textarea placeholder="Your Message" rows="5" required style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;"></textarea>
-                </div>
-                <button type="submit" class="btn" style="background: linear-gradient(135deg, #00c6ff, #0072ff); padding: 1rem 2rem; color: #fff; font-size: 1.2rem; border-radius: 50px; cursor: pointer; transition: background 0.3s ease;">
-                    Send Message
-                </button>
+            <form id="contact-form" class="contact-form" 
+                  style="flex: 1; background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
+            
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <input type="text" name="from_name" placeholder="Your Name" required 
+                       style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;">
+              </div>
+            
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <input type="email" name="reply_to" placeholder="Your Email" required 
+                       style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;">
+              </div>
+            
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <input type="tel" name="phone" placeholder="Your Phone" 
+                       style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;">
+              </div>
+            
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <textarea name="message" placeholder="Your Message" rows="5" required 
+                          style="width: 100%; padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; transition: border 0.3s;"></textarea>
+              </div>
+            
+              <button type="submit" class="btn" 
+                      style="background: linear-gradient(135deg, #00c6ff, #0072ff); padding: 1rem 2rem; color: #fff; font-size: 1.2rem; border-radius: 50px; cursor: pointer; transition: background 0.3s ease;">
+                Send Message
+              </button>
             </form>
         </div>
     </div>
@@ -925,24 +936,25 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-      (function(){
-        // Initialize EmailJS with your public key
-        emailjs.init("YOUR_PUBLIC_KEY"); 
-      })();
-    
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-    
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-          .then(() => {
-            alert("Message sent successfully! 🎉");
-            this.reset();
-          }, (error) => {
-            alert("Failed to send message. ❌ " + JSON.stringify(error));
+   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+          (function(){
+            // Replace with your real Public Key from EmailJS
+            emailjs.init(yashwanth09042004@gmail.com); 
+          })();
+        
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            // Replace with your real Service ID and Template ID from EmailJS
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+              .then(() => {
+                alert("Message sent successfully! 🎉");
+                this.reset();
+              }, (error) => {
+                alert("Failed to send message. ❌ " + JSON.stringify(error));
+              });
           });
-      });
-    </script>
+        </script>
 </body>
 </html>
