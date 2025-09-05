@@ -891,13 +891,13 @@
 
 <!-- CSS for Hover and Focus Effects -->
 <style>
-    /* Input and textarea focus effect */
+    
     input:focus, textarea:focus {
         border-color: #00c6ff;
         outline: none;
     }
 
-    /* Hover effect for the button */
+    
     .btn:hover {
         background: linear-gradient(135deg, #0072ff, #00c6ff);
     }
@@ -939,15 +939,15 @@
    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
         <script>
           (function(){
-            // Replace with your real Public Key from EmailJS
+            
             emailjs.init("yashwanth09042004@gmail.com"); 
           })();
         
           document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
         
-            // Replace with your real Service ID and Template ID from EmailJS
-            emailjs.sendForm('service_cmr2rys' , 'template_b3oyfsa', this)
+            
+            emailjs.sendForm("service_cmr2rys" , "template_b3oyfsa", this)
               .then(() => {
                 alert("Message sent successfully! 🎉");
                 this.reset();
